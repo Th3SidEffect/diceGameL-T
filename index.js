@@ -92,18 +92,10 @@ function holdDice() {
 }
 
 function changePlayer() {
-    if(activePlayer == 1) {
-        activePlayer = 2;
-        player1.classList.remove("player--active");
-        player2.classList.add("player--active");
-        currentScore = 0;
-    }
-    else{
-        activePlayer = 1;
-        player2.classList.remove("player--active");
-        player1.classList.add("player--active");
-        currentScore = 0;
-    }
+    activePlayer = activePlayer === 1 ? 2 : 1;
+    player1.classList.toggle("player--active");
+    player2.classList.toggle("player--active");
+    currentScore = 0;
 }
 
 
